@@ -35,8 +35,13 @@ The data came from a customer survey that contained responses from 126 customers
 - Created histograms displaying the frequency of each response to each feature question
 
 **Modelling**
-- [Lazy Predict Notebook](/notebooks/modelling/lazy_predict.ipynb) Used lazy predict to establish which models may be effective
-- Went forward with [KNeighbors](/notebooks/modelling/knn.ipynb), [BernoulliNB](/notebooks/modelling/bnb.ipynb), [RandomForest](/notebooks/modelling/random_forest.ipynb) and [XGBoost](/notebooks/modelling/xgb_model.ipynb)
+- Used lazy predict to establish which models may be effective
+- Went forward with KNeighbors, BernoulliNB, RandomForest and XGBoost
+    - [Lazy Predict](/notebooks/modelling/lazy_predict.ipynb)
+    - [KNeighbors](/notebooks/modelling/knn.ipynb)
+    - [BernoulliNB](/notebooks/modelling/bnb.ipynb)
+    - [RandomForest](/notebooks/modelling/random_forest.ipynb)
+    - [XGBoost](/notebooks/modelling/xgb_model.ipynb)
 - Used GridSearchCV to tune the hyperparameters of each model
 - XGBoost performed better than the others, but still only achieved a moderate accuracy
 - Tried each subset of features
