@@ -22,3 +22,13 @@ The client wanted to be able to predict whether a customer was happy overall bas
 - Created histograms displaying the frequency of each response to each feature question
 
 [EDA Notebook](/notebooks/exploration/EDA.ipynb)
+
+**Modelling**
+- Used lazy predict to establish which models may be effective
+- Went forward with KNeighbors, BernoulliNB, RandomForest and XGBoost
+- Used GridSearchCV to tune the hyperparameters of each model
+- XGBoost performed better than the others, but still only achieved a moderate accuracy
+- Tried each subset of features
+- Managed to achieve 81% accuracy with XGBoost using just 2 features
+
+[Modelling Notebooks](/notebooks/modelling)
