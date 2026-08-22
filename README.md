@@ -15,7 +15,7 @@ The client was a growing logistics and delivery start-up that was trying to unde
 The data came from a customer survey that contained responses from 126 customers who answered 7 questions - 6 specific questions about their experience, rated 1-5 (to be used as the features) and whether they were happy overall, yes or no (to be used as the target).
 
 | Question | Description | Scoring |
-|---|---|---|
+|:---:|---|:---:|
 | X1 | My order was delivered on time | 1 - 5 |
 | X2 | Contents of my order was as I expected | 1 - 5 |
 | X3 | I ordered everything I wanted to order | 1 - 5 |
