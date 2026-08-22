@@ -27,6 +27,7 @@ The data came from a customer survey that contained responses from 126 customers
 ## Project Process
 
 **Exploratory Data Analysis**
+
 [EDA Notebook](/notebooks/exploration/EDA.ipynb)
 - Checked and found no bad data points (e.g. a non-integer survey response, a response greater than 5 or less than 1 etc.)
 - Checked and found no null values
