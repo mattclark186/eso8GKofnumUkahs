@@ -22,7 +22,7 @@ The data came from a customer survey that contained responses from 126 customers
 | X4 | I paid a good price for my order | 1 - 5 |
 | X5 | I am satisfied with my courier | 1 - 5 |
 | X6 | The app makes ordering easy for me | 1 - 5 |
-| Y | I was happy over all | Yes or No |
+| Y | I was happy overall | Yes/No |
 
 ## Project Process
 
