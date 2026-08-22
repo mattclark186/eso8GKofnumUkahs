@@ -2,13 +2,13 @@
 
 This project aimed to use machine learning to create a model that can accurately predict whether a customer was happy overall based on their response to several survey questions.
 
-The final outcome was an XGBoost model that can predict happiness with 81% accuracy.
+The final model was an XGBoost classifier, achieving 81% accuracy using just 2 of the 6 available features.
 
 This was all completed using Python.
 
 ## The Brief
 
-The client was a growing logistics and delivery start-up that was trying to understand more about their customers' experiences. They wanted to be able to predict what makes customers happy in order to take necessary actions to improve. They also wanted to know which questions made the most difference to overall happiness so that they could identify which areas of the experience to focus on.
+The client was a growing logistics and delivery start-up that was trying to understand more about their customers' experiences. They wanted to be able to predict customer happiness from survey responses and specifically wanted to know which questions made the most difference to overall happiness. This would help them identify which areas to focus on to improve their service for their customers.
 
 ## The Data
 
@@ -36,16 +36,16 @@ The data came from a customer survey that contained responses from 126 customers
 - Created histograms displaying the frequency of each response to each feature question
 
 **Modelling**
-- Used lazy predict to establish which models may be effective
+- Used LazyPredict to establish which models may be effective
 - Went forward with KNeighbors, BernoulliNB, RandomForest and XGBoost
-    - [Lazy Predict](/notebooks/modelling/lazy_predict.ipynb)
+    - [LazyPredict](/notebooks/modelling/lazy_predict.ipynb)
     - [KNeighbors](/notebooks/modelling/knn.ipynb)
     - [BernoulliNB](/notebooks/modelling/bnb.ipynb)
     - [RandomForest](/notebooks/modelling/random_forest.ipynb)
     - [XGBoost](/notebooks/modelling/xgb_model.ipynb)
 - Used GridSearchCV to tune the hyperparameters of each model
 - XGBoost performed better than the others, but still only achieved a moderate accuracy
-- Tried each subset of features
+- Evaluated each model using each possible combination of features to see if a smaller feature set could improve performance
 - Managed to achieve 81% accuracy with XGBoost using just 2 features
 
 ## Conclusion
@@ -62,4 +62,4 @@ And did so using just 2 features of the available 6:
 - X1: My order was delivered on time
 - X5: I am satisfied with my courier
 
-This data is sufficient to predict whether a customer is happy overall with 81% accuracy. It's worth noting that X1 is nearly twice as important as X5 (62% and 38% respectively). Therefore, the recommendation to the client was to reduce the customer survey to just these 2 questions, simplifying the data collection process.
+With the available data, this was the best feature combination. It's worth noting that X1 was nearly twice as important as X5 (62% and 38% respectively). Therefore, the recommendation to the client was that the survey could be reduced to just these 2 questions, simplifying the data collection process without impacting the predictive power of the data.
