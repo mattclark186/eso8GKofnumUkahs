@@ -32,3 +32,30 @@ The client wanted to be able to predict whether a customer was happy overall bas
 - Managed to achieve 81% accuracy with XGBoost using just 2 features
 
 [Modelling Notebooks](/notebooks/modelling)
+
+## Conclusion
+
+The final model used was XGBoost with just 2 features of the available 6:
+
+- X1 (importance 0.62)
+- X5 (importance 0.38)
+  
+It had the following hyperparameters:
+
+- Learning rate: 0.01
+- Max depth: 3
+- n estimators: 100
+
+And achieved the following metrics:
+
+- Accuracy: 0.81
+- Recall: 0.80
+- Precision: 0.81
+- F1: 0.81
+
+Therefore, the recommendation to the client was to reduce the survey to just the 2 most significant questions, simplifying the data collection process:
+
+- X1: My order was delivered on time
+- X5: I am satisfied with my courier
+
+This data is sufficient to predict whether a customer is happy overall with 81% accuracy. It is also worth noting that X1 is nearly twice as important as X5 (62% and 38% respectively)
