@@ -1,16 +1,28 @@
 # Customer Survey Analysis
 
-This project aimed to create a model that can accurately predict whether a customer was happy overall based on their response to several survey questions.
+This project aimed to use machine learning to create a model that can accurately predict whether a customer was happy overall based on their response to several survey questions.
 
 The final outcome was an XGBoost model that can predict happiness with 81% accuracy.
 
+This was all completed using Python.
+
 ## The Brief
 
-The client was a growing logistics and delivery start-up that was trying to understand more about their customers' experiences. They wanted to be able to predict what makes customers happy in order to take necessary actions to improve.
+The client was a growing logistics and delivery start-up that was trying to understand more about their customers' experiences. They wanted to be able to predict what makes customers happy in order to take necessary actions to improve. They also wanted to know which questions made the most difference to overall happiness so that they could identify which areas of the experience to focus on.
 
-They had data from a customer survey. It contained responses from 126 customers who answered 7 questions - 6 specific questions about their experience, rated 1-5 (to be used as the features) and whether they were happy overall, yes or no (to be used as the target).
+## The Data
 
-The client wanted to be able to predict whether a customer was happy overall based on their response to the other 6 questions. They also wanted to know which questions made the most difference to overall happiness so that they could identify which areas of the experience to focus on.
+The data came from a customer survey that contained responses from 126 customers who answered 7 questions - 6 specific questions about their experience, rated 1-5 (to be used as the features) and whether they were happy overall, yes or no (to be used as the target).
+
+| Question | Description | Scoring |
+|---|---|---|
+| X1 | My order was delivered on time | 1 - 5 |
+| X2 | Contents of my order was as I expected | 1 - 5 |
+| X3 | I ordered everything I wanted to order | 1 - 5 |
+| X4 | I paid a good price for my order | 1 - 5 |
+| X5 | I am satisfied with my courier | 1 - 5 |
+| X6 | The app makes ordering easy for me | 1 - 5 |
+| Y | I was happy over all | Yes or No |
 
 ## Project Process
 
