@@ -27,17 +27,16 @@ The data came from a customer survey that contained responses from 126 customers
 ## Project Process
 
 **Exploratory Data Analysis**
+[EDA Notebook](/notebooks/exploration/EDA.ipynb)
 - Checked and found no bad data points (e.g. a non-integer survey response, a response greater than 5 or less than 1 etc.)
 - Checked and found no null values
 - Every feature and the target had the same number of values
 - No features were highly correlated with each other or the target
 - Created histograms displaying the frequency of each response to each feature question
 
-[EDA Notebook](/notebooks/exploration/EDA.ipynb)
-
 **Modelling**
-- Used lazy predict to establish which models may be effective
-- Went forward with KNeighbors, BernoulliNB, RandomForest and XGBoost
+- [Lazy Predict Notebook](/notebooks/modelling/lazy_predict.ipynb) Used lazy predict to establish which models may be effective
+- Went forward with [KNeighbors](/notebooks/modelling/knn.ipynb), [BernoulliNB](/notebooks/modelling/bnb.ipynb), [RandomForest](/notebooks/modelling/random_forest.ipynb) and [XGBoost](/notebooks/modelling/xgb_model.ipynb)
 - Used GridSearchCV to tune the hyperparameters of each model
 - XGBoost performed better than the others, but still only achieved a moderate accuracy
 - Tried each subset of features
