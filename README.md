@@ -48,8 +48,6 @@ The data came from a customer survey that contained responses from 126 customers
 - Tried each subset of features
 - Managed to achieve 81% accuracy with XGBoost using just 2 features
 
-[Modelling Notebooks](/notebooks/modelling)
-
 ## Conclusion
 
 The final model used was XGBoost and achieved the following metrics:
