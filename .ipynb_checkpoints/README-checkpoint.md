@@ -52,10 +52,10 @@ The data came from a customer survey that contained responses from 126 customers
 
 The final model used was XGBoost and achieved the following metrics:
 
-- Accuracy: 0.81
-- Recall: 0.80
-- Precision: 0.81
-- F1: 0.81
+- 0.81 Accuracy
+- 0.80 Recall
+- 0.81 Precision
+- 0.81 F1
 
 And did so using just 2 features of the available 6:
 
