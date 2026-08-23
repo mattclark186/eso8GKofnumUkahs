@@ -13,7 +13,7 @@ def x_y_split(data):
 
 def tt_split(x, y):
     return train_test_split(
-        x, y, test_size=0.2, stratify=y, random_state=29
+        x, y, test_size=0.2, stratify=y, random_state=42
     )
 
 
