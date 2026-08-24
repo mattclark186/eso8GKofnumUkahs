@@ -2,7 +2,11 @@
 
 This project aimed to use machine learning to create a model that can accurately predict whether a customer was happy overall based on their response to several survey questions.
 
-The final model was an XGBoost classifier, achieving 81% accuracy using just 2 of the 6 available features.
+The final model was an XGBoost classifier, achieving 81% accuracy.
+
+The 2 most important factors to focus on to ensure customer happiness were:
+ - Orders being delivered on time
+ - Courier satisfaction
 
 This was all completed using Python.
 
@@ -44,33 +48,35 @@ The data came from a customer survey that contained responses from 126 customers
     - [RandomForest](/notebooks/modelling/random_forest.ipynb)
     - [XGBoost](/notebooks/modelling/xgb_model.ipynb)
 - Used GridSearchCV to tune the hyperparameters of each model
-- XGBoost performed better than the others, but still only achieved a moderate accuracy
-- Evaluated each model using each possible combination of features to see if a smaller feature set could improve performance
-- Managed to achieve 81% accuracy with XGBoost using just 2 features
+- The simpler models, KNeighbors and BernoulliNB, performed moderately well
+- The complex models, RandomForest and XGBoost, performed slightly better
+- Using each possible sub-combination of features, the complex models were tuned again
+- Managed to achieve 81% accuracy with both XGBoost and RandomForest using just 2 features (X1 and X5)
+- XGBoost was chosen as the final model
 
 **Model Performance**
 
 | Model Type | Features Used | Accuracy | F1 | Precision | Recall |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| KNeighbors | All | 62% | 55% | 67% | 59 |
+| KNeighbors | All | 62% | 55% | 67% | 59% |
 | BernoulliNB | All | 69% | 68% | 69% | 68% |
 | RandomForest | All | 77% | 77% | 77% | 77% |
 | XGBoost | All | 73% | 71% | 77% | 71% |
 | RandomForest | X1, X5 | 81% | 81% | 81% | 80% |
-| XGBoost | X1, X5 | 81% | 81% | 81% | 81% |
+| XGBoost | X1, X5 | 81% | 81% | 81% | 80% |
 
 ## Conclusion
 
 The final model used was XGBoost and achieved the following metrics:
 
-- 0.81 Accuracy
-- 0.80 Recall
-- 0.81 Precision
-- 0.81 F1
+- 81% Accuracy
+- 81% F1
+- 81% Precision
+- 80% Recall
 
 And did so using just 2 features of the available 6:
 
 - X1: My order was delivered on time
 - X5: I am satisfied with my courier
 
-With the available data, this was the best feature combination. It's worth noting that X1 was nearly twice as important as X5 (62% and 38% respectively). Therefore, the recommendation to the client was that the survey could be reduced to just these 2 questions, simplifying the data collection process without impacting the predictive power of the data.
+With the available data, this was the best feature combination. It's worth noting that X1 was nearly twice as important as X5 (62% and 38% respectively). Therefore, the recommendation to the client was that order delivery time and courier satisfaction were the 2 most important factors to focus on in order to ensure customer happiness. 
