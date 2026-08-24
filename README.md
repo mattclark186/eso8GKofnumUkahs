@@ -24,7 +24,7 @@ The data came from a customer survey that contained responses from 126 customers
 | X6 | The app makes ordering easy for me | 1 - 5 | Feature |
 | Y | I was happy overall | Yes/No | Target |
 
-## Project Process
+## Analysis and Modelling
 
 **Exploratory Data Analysis**
 
@@ -47,6 +47,17 @@ The data came from a customer survey that contained responses from 126 customers
 - XGBoost performed better than the others, but still only achieved a moderate accuracy
 - Evaluated each model using each possible combination of features to see if a smaller feature set could improve performance
 - Managed to achieve 81% accuracy with XGBoost using just 2 features
+
+**Model Performance**
+
+| Model Type | Features Used | Accuracy | F1 | Precision | Recall |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| KNeighbors | All | 62% | 55% | 67% | 59 |
+| BernoulliNB | All | 69% | 68% | 69% | 68% |
+| RandomForest | All | 77% | 77% | 77% | 77% |
+| XGBoost | All | 73% | 71% | 77% | 71% |
+| RandomForest | X1, X5 | 81% | 81% | 81% | 80% |
+| XGBoost | X1, X5 | 81% | 81% | 81% | 81% |
 
 ## Conclusion
 
